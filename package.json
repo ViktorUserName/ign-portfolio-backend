@@ -1,0 +1,51 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./service/index.js",
+  "scripts": {
+    "start": "nodemon index.js | pino-pretty",
+    "migrate": "node node_modules/db-migrate/bin/db-migrate up",
+    "lint": "eslint --ext .js service/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "busha98",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "bluebird": "^3.5.5",
+    "dateformat": "^3.0.3",
+    "db-migrate": "^0.11.6",
+    "db-migrate-mysql": "^1.1.10",
+    "db-migrate-shared": "^1.2.0",
+    "dotenv": "^8.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-cors": "0.0.16",
+    "koa-helmet": "^5.1.0",
+    "koa-router": "^7.4.0",
+    "nodemon": "^1.19.1",
+    "pino": "^5.13.2",
+    "pino-pretty": "^3.2.1",
+    "ramda": "^0.26.1",
+    "validator": "^12.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.0",
+    "husky": "^3.0.4",
+    "prettier": "^1.18.2"
+  }
+}
